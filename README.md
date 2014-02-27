@@ -56,7 +56,7 @@ class SomeController {
 
   public function index()
   {
-    return Response::fractal()->resource($data);
+    return Response::fractal()->resources($data);
   }
   
 }
