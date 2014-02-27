@@ -3,7 +3,7 @@ Fractal Wrapper
 
 [![Build Status](https://travis-ci.org/BastianHofmann/fractal-magic.png?branch=master)](https://travis-ci.org/BastianHofmann/fractal-magic)
 
-This package puts a nice wrapper around Phil Sturgeon's fractal package. It handles the nitty gritty task of spinning up the manager, creating a resource and provides a convient location to register your transformers. 
+This package puts a nice wrapper around the fractal package: http://fractal.thephpleague.com. It handles the nitty gritty task of spinning up the manager, creating a resource and provides a convient location to register your transformers. 
 
 ## Installation
 
