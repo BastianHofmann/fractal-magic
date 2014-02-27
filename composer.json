@@ -11,9 +11,9 @@
     },
     "autoload": {
         "psr-4": {
-            "Hofmann\\FractalMagic\\": "src",
+            "Hofmann\\FractalMagic\\": "src"
         }
-    }
+    },
     "authors": [
         {
             "name": "Bastian Hofmann",

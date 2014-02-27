@@ -1,4 +1,4 @@
-<?php namespace App\Support;
+<?php namespace Hofmann\FractalMagic;
 
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Illuminate\Support\Str;
@@ -10,18 +10,17 @@ class Fractal {
 
 	protected $bindings;
 
+    protected $manager;
+
     public function __construct($bindings = [])
     {
     	$this->bindings = $bindings;
+
+        $this->manager = new Manager;
     }
 
     protected function createData($method, $data)
     {
-        if(is_null($data))
-        {
-            return $data;
-        }
-
         $key = Str::singular($method);
 
         $transformer = $this->bindings[$key];
@@ -34,10 +33,8 @@ class Fractal {
         {
             $resource = new Collection($data, $transformer);
         }
-
-        $manager = new Manager;
         
-        return $manager->createData($resource)->toArray();
+        return $this->manager->createData($resource)->toArray();
     }
 
     public function getBindings()
@@ -50,6 +47,16 @@ class Fractal {
         $this->bindings = $bindings;
     }
 
+    public function getManager()
+    {
+        return $this->manager;
+    }
+
+    public function setManager($manager)
+    {
+        $this->manager = $manager;
+    }
+    
     public function __call($method, $arguments)
     {
         if(array_key_exists(Str::singular($method), $this->bindings))
