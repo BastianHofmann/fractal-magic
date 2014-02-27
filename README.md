@@ -1,6 +1,6 @@
 Fractal Wrapper
 =============
 
-This package puts a nice wrapper around Phil Sturgeon's fractal package.
+[![Build Status](https://travis-ci.org/BastianHofmann/fractal-magic.png?branch=master)](https://travis-ci.org/BastianHofmann/fractal-magic)
 
-Under Development
+This package puts a nice wrapper around Phil Sturgeon's fractal package.
