@@ -48,3 +48,16 @@ Response::macro('fractal', function()
   ]);
 });
 ```
+
+Now you can use this in your controller:
+
+``` php
+class SomeController {
+
+  public function index()
+  {
+    return Response::fractal()->resource($data);
+  }
+  
+}
+```
