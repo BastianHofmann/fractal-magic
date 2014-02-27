@@ -34,7 +34,7 @@ $fractal->resources([
 ```
 
 Notice that you only have to set the singular resource binding.
-This will return a Symfony response with the data in place.
+This will return a Symfony response with the data in place, which you can return from your controller or route closure.
 
 ## Laravel Usage
 
