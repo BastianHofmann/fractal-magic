@@ -38,7 +38,7 @@ This will return a Symfony response with the data in place, which you can return
 
 ## Laravel Usage
 
-For usage in laravel I suggest you register a `Response::marco` like this:
+For usage in laravel I suggest you register a `Response::macro` like this:
 
 ``` php
 Response::macro('fractal', function()
