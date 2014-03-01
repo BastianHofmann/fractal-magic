@@ -12,9 +12,13 @@ class Fractal {
 
     protected $manager;
 
-    public function __construct($bindings = [])
+    protected $scopes;
+
+    public function __construct($bindings = [], $scopes = [])
     {
     	$this->bindings = $bindings;
+
+        $this->scopes = $scopes;
 
         $this->manager = new Manager;
     }
@@ -33,6 +37,8 @@ class Fractal {
         {
             $resource = new Collection($data, $transformer);
         }
+
+        $this->manager->setRequestedScopes($this->scopes);
         
         return $this->manager->createData($resource)->toArray();
     }
