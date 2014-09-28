@@ -19,16 +19,16 @@ and run `composer update`.
 
 ``` php
 $fractal = new Hofmann\FractalMagic\Fractal([
-  'resource' => new ResourceTransformer
+  'posts' => new ResourceTransformer
 ]);
 
 // Singular for a fractal item
 
-$fractal->resource(['title' => 'Hello']);
+$fractal->post(['title' => 'Hello']);
 
 // Plural for a fractal collection
 
-$fractal->resources([
+$fractal->posts([
   ['title' => 'Hi!']
 ]);
 ```
