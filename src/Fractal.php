@@ -38,8 +38,8 @@ class Fractal {
             $resource = new Collection($data, $transformer);
         }
 
-        $this->manager->setRequestedScopes($this->scopes);
-        
+        $this->manager->parseFieldsets($this->scopes);
+
         return $this->manager->createData($resource)->toArray();
     }
 
@@ -62,7 +62,7 @@ class Fractal {
     {
         $this->manager = $manager;
     }
-    
+
     public function __call($method, $arguments)
     {
         if(array_key_exists(Str::singular($method), $this->bindings))
